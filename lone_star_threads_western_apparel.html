@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lone Star Threads | Modern Western Embroidered Caps & Button Ups &bull; Lubbock, TX</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: Cinzel Decorative / Serif for bold modern western headlines, Inter for crisp UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#080808',
+                            jet: '#121212',
+                            charcoal: '#1A1A1A',
+                            cardBg: '#151515',
+                            border: '#2A2A2A',
+                            borderDark: '#202020',
+                            wireSteel: '#71717A',
+                            wireLight: '#A1A1AA',
+                            saddle: '#9B6131',
+                            leather: '#8B4513',
+                            terracotta: '#B87A3D',
+                            gold: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #080808;
+            color: #F3F4F6;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .western-header {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.04em;
+        }
+
+        /* Custom Rugged Barbed Wire Card Frame Container */
+        .rugged-wire-card {
+            position: relative;
+            background: #121212;
+            border: 2px solid #262626;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .rugged-wire-card:hover {
+            border-color: #B87A3D;
+            box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.95), 0 0 20px rgba(184, 122, 61, 0.25);
+            transform: translateY(-5px);
+        }
+
+        .rugged-wire-card:hover .barb-element {
+            color: #B87A3D;
+            filter: drop-shadow(0 0 3px rgba(184, 122, 61, 0.6));
+            transition: all 0.3s ease;
+        }
+
+        /* Slide-over cart drawer animation */
+        .cart-drawer {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .cart-drawer.closed {
+            transform: translateX(100%);
+        }
+        .cart-drawer.open {
+            transform: translateX(0);
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080808;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 0px;
+            border: 1px solid #B87A3D;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B87A3D;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-terracotta selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-black text-gray-300 text-xs py-2 px-4 border-b border-brand-border flex justify-between items-center tracking-wider uppercase font-semibold">
+        <div class="hidden sm:flex items-center space-x-2 text-[11px] text-brand-terracotta">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Flagship Workshop: Lubbock, Texas &bull; EST. 2026</span>
+        </div>
+        <div class="mx-auto sm:mx-0 flex items-center space-x-2">
+            <i class="fa-solid fa-star text-brand-terracotta text-[10px]"></i>
+            <span>Free Express Shipping on Orders Over $120</span>
+            <i class="fa-solid fa-star text-brand-terracotta text-[10px]"></i>
+        </div>
+        <div class="hidden md:flex items-center space-x-4 text-[11px]">
+            <a href="#about" class="hover:text-white transition-colors">West Texas Heritage</a>
+            <span>&bull;</span>
+            <a href="#support" class="hover:text-white transition-colors">Support & Sizing</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-brand-black/95 backdrop-blur-md border-b border-brand-border shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                
+                <!-- CUSTOM BRAND LOGO CONTAINER -->
+                <!-- Note: To use a custom image logo file, simply replace the SVG block below with: 
+                     <img src="YOUR_LOGO_IMAGE_URL.jpg" alt="Lone Star Threads Logo" class="h-14 w-auto object-contain"> 
+                -->
+                <a href="#" onclick="filterProducts('all')" class="flex items-center space-x-3.5 group py-2" title="Lone Star Threads - Lubbock, Texas">
+                    <div id="brandLogoContainer" class="w-14 h-14 bg-black border-2 border-brand-terracotta flex items-center justify-center p-1.5 shadow-xl group-hover:border-white transition-colors relative">
+                        <!-- Custom Vector Branding: Cattle Brand LST Symbol -->
+                        <svg class="w-full h-full text-white group-hover:text-brand-terracotta transition-colors" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer Brand Ring -->
+                            <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3" stroke-dasharray="6 3"/>
+                            <!-- Star Accent -->
+                            <polygon points="50,14 53,24 63,24 55,30 58,40 50,34 42,40 45,30 37,24 47,24" fill="#B87A3D"/>
+                            <!-- Monogram Cattle Brand Line: L S T -->
+                            <path d="M 30,48 L 30,72 L 46,72 M 50,48 C 62,48 62,58 50,58 C 38,58 38,72 50,72 M 38,48 L 62,48 M 70,48 L 70,72" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <span class="western-header text-xl sm:text-2xl font-black tracking-widest text-white leading-none">LONE STAR</span>
+                        <div class="flex items-center space-x-1 mt-1">
+                            <span class="text-[9px] tracking-[0.3em] font-extrabold text-brand-terracotta uppercase block">Threads Apparel Co.</span>
+                        </div>
+                        <span class="text-[8px] font-bold text-gray-400 tracking-widest uppercase mt-0.5">Lubbock &bull; Texas</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Category Navigation Links -->
+                <nav class="hidden lg:flex space-x-8 text-xs uppercase font-bold tracking-widest">
+                    <button onclick="filterProducts('all')" class="nav-link text-white hover:text-brand-terracotta transition-colors py-1 relative border-b-2 border-brand-terracotta" data-category="all">All Collection</button>
+                    <button onclick="filterProducts('snapbacks')" class="nav-link text-gray-400 hover:text-white transition-colors py-1 relative border-b-2 border-transparent" data-category="snapbacks">Embroidered Caps</button>
+                    <button onclick="filterProducts('short-sleeve')" class="nav-link text-gray-400 hover:text-white transition-colors py-1 relative border-b-2 border-transparent" data-category="short-sleeve">Short Sleeve Button Ups</button>
+                    <button onclick="filterProducts('long-sleeve')" class="nav-link text-gray-400 hover:text-white transition-colors py-1 relative border-b-2 border-transparent" data-category="long-sleeve">Long Sleeve Button Ups</button>
+                </nav>
+
+                <!-- Search & Shopping Cart Action Buttons -->
+                <div class="flex items-center space-x-4">
+                    <!-- Live Search Input -->
+                    <div class="relative hidden sm:block">
+                        <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Search embroidered caps & shirts..." 
+                               class="bg-brand-jet border border-brand-border text-xs py-2.5 pl-9 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-terracotta focus:ring-1 focus:ring-brand-terracotta w-44 xl:w-64 transition-all">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-500 text-xs"></i>
+                    </div>
+
+                    <!-- Cart Toggle Button -->
+                    <button onclick="toggleCart()" class="relative p-3 text-white hover:text-brand-terracotta bg-brand-jet border border-brand-border hover:border-brand-terracotta transition-all" aria-label="Shopping Cart">
+                        <i class="fa-solid fa-bag-shopping text-base"></i>
+                        <span id="cartBadge" class="absolute -top-1.5 -right-1.5 bg-brand-terracotta text-black font-black text-[10px] px-1.5 py-0.5 border border-black hidden">
+                            0
+                        </span>
+                    </button>
+
+                    <!-- Mobile Navigation Menu Toggle -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-3 text-white bg-brand-jet border border-brand-border focus:outline-none">
+                        <i class="fa-solid fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search Bar Input -->
+            <div class="sm:hidden pb-4 pt-1">
+                <div class="relative">
+                    <input type="text" id="mobileSearchInput" onkeyup="handleSearch('mobile')" placeholder="Search caps & button ups..." 
+                           class="w-full bg-brand-jet border border-brand-border text-xs py-2.5 pl-9 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-terracotta">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-500 text-xs"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-jet border-b border-brand-border px-6 py-4 space-y-3 text-xs font-bold uppercase tracking-wider">
+            <button onclick="filterProducts('all'); toggleMobileMenu()" class="block w-full text-left py-2 text-white hover:text-brand-terracotta">All Apparel</button>
+            <button onclick="filterProducts('snapbacks'); toggleMobileMenu()" class="block w-full text-left py-2 text-gray-400 hover:text-white">Embroidered Caps</button>
+            <button onclick="filterProducts('short-sleeve'); toggleMobileMenu()" class="block w-full text-left py-2 text-gray-400 hover:text-white">Short Sleeve Button Ups</button>
+            <button onclick="filterProducts('long-sleeve'); toggleMobileMenu()" class="block w-full text-left py-2 text-gray-400 hover:text-white">Long Sleeve Button Ups</button>
+        </div>
+    </header>
+
+    <!-- Modern Western Hero Section -->
+    <section class="relative bg-black text-white overflow-hidden border-b border-brand-border">
+        <div class="absolute inset-0 z-0 opacity-35 mix-blend-luminosity">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1920&q=80" alt="West Texas Western Apparel Banner" class="w-full h-full object-cover object-center" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 flex flex-col items-start justify-center">
+            
+            <div class="inline-flex items-center space-x-2 px-3 py-1 bg-brand-jet border border-brand-border text-[11px] font-bold uppercase tracking-widest text-brand-terracotta mb-6">
+                <i class="fa-solid fa-star text-xs"></i>
+                <span>Direct Embroidery & Standard Button Ups &bull; Lubbock, TX</span>
+            </div>
+
+            <h1 class="western-header text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl leading-[1.05]">
+                RUGGED WEST TEXAS APPAREL.
+            </h1>
+            
+            <p class="mt-6 text-sm sm:text-lg text-gray-300 max-w-xl font-normal leading-relaxed">
+                Direct custom 3D embroidery caps and crisp tailored button-up long & short sleeve shirts. High contrast monochrome style with authentic Texas durability.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="#catalog" class="px-8 py-4 bg-white hover:bg-brand-terracotta hover:text-black text-black font-bold text-xs uppercase tracking-widest transition-all shadow-2xl flex items-center group">
+                    Shop Collection
+                    <i class="fa-solid fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#about" class="px-8 py-4 bg-brand-jet/90 hover:bg-black text-white font-bold text-xs uppercase tracking-widest border border-brand-border hover:border-brand-terracotta transition-all backdrop-blur-sm">
+                    Our Lubbock Story
+                </a>
+            </div>
+
+            <!-- Feature Badges -->
+            <div class="mt-14 pt-8 border-t border-brand-border grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl text-xs text-gray-400 uppercase tracking-widest">
+                <div class="flex items-center space-x-3">
+                    <span class="w-2 h-2 bg-brand-terracotta"></span>
+                    <span>100% Direct Custom Embroidery</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="w-2 h-2 bg-brand-terracotta"></span>
+                    <span>Standard Button Up Shirts Only</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="w-2 h-2 bg-brand-terracotta"></span>
+                    <span>Rugged Barbed Wire Framing</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Catalog Main Section -->
+    <main id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
+        
+        <!-- Category Filter Bar -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-brand-border pb-6 mb-12 gap-6">
+            <div>
+                <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest block mb-1">High Contrast Collection</span>
+                <h2 class="western-header text-3xl sm:text-4xl font-bold text-white">Apparel Catalog</h2>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap gap-2">
+                <button onclick="filterProducts('all')" class="filter-btn active-filter px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all bg-white text-black border border-white" data-cat="all">
+                    All Products
+                </button>
+                <button onclick="filterProducts('snapbacks')" class="filter-btn px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all bg-brand-jet text-gray-300 border border-brand-border hover:border-brand-terracotta" data-cat="snapbacks">
+                    Embroidered Caps
+                </button>
+                <button onclick="filterProducts('short-sleeve')" class="filter-btn px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all bg-brand-jet text-gray-300 border border-brand-border hover:border-brand-terracotta" data-cat="short-sleeve">
+                    Short Sleeve Button Ups
+                </button>
+                <button onclick="filterProducts('long-sleeve')" class="filter-btn px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all bg-brand-jet text-gray-300 border border-brand-border hover:border-brand-terracotta" data-cat="long-sleeve">
+                    Long Sleeve Button Ups
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Grid Dynamic Container -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Dynamically populated via JavaScript -->
+        </div>
+
+        <!-- Empty Search Fallback View -->
+        <div id="noResults" class="hidden text-center py-20 bg-brand-jet border border-brand-border my-8">
+            <div class="w-16 h-16 bg-brand-black border border-brand-terracotta text-brand-terracotta flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3 class="western-header text-xl font-bold text-white">No Matching Apparel Found</h3>
+            <p class="text-xs text-gray-400 mt-2">Try clearing your search terms or selecting a different category above.</p>
+            <button onclick="filterProducts('all')" class="mt-6 px-6 py-3 bg-brand-terracotta text-black font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors">
+                Show All Apparel
+            </button>
+        </div>
+    </main>
+
+    <!-- Brand Value Props & Heritage Story -->
+    <section id="about" class="bg-brand-jet border-y border-brand-border py-20 my-12 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
+                <!-- Feature 1 -->
+                <div class="p-8 bg-black border border-brand-border hover:border-brand-terracotta transition-colors">
+                    <div class="w-12 h-12 bg-brand-jet border border-brand-terracotta text-brand-terracotta flex items-center justify-center mx-auto mb-6 text-lg">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="western-header text-lg font-bold text-white mb-3">Direct Custom Embroidery</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">
+                        High-density 3D raised threadwork stitched directly onto premium cotton canvas caps—zero vinyl patches or leather overlays.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 bg-black border border-brand-border hover:border-brand-terracotta transition-colors">
+                    <div class="w-12 h-12 bg-brand-jet border border-brand-terracotta text-brand-terracotta flex items-center justify-center mx-auto mb-6 text-lg">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3 class="western-header text-lg font-bold text-white mb-3">Tailored Button Ups</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">
+                        Crisp standard button closure long & short sleeve shirts with reinforced collars, dual flap chest pockets, and durable stitching.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 bg-black border border-brand-border hover:border-brand-terracotta transition-colors">
+                    <div class="w-12 h-12 bg-brand-jet border border-brand-terracotta text-brand-terracotta flex items-center justify-center mx-auto mb-6 text-lg">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="western-header text-lg font-bold text-white mb-3">Lubbock, TX Direct Dispatch</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">
+                        Every order is inspected and shipped directly from our West Texas workshop. Enjoy hassle-free 30-day returns and exchanges.
+                    </p>
+                </div>
+            </div>
+
+            <!-- RUGGED BARBED WIRE FEATURE BANNER CONTAINER -->
+            <div class="relative p-8 sm:p-14 bg-brand-black border-2 border-brand-border overflow-hidden">
+                
+                <!-- TOP SVG DETAILED BARBED WIRE STRIP -->
+                <div class="absolute top-0 left-0 right-0 h-4 overflow-hidden pointer-events-none opacity-90">
+                    <svg class="w-full h-full text-brand-wireSteel" viewBox="0 0 1200 18" preserveAspectRatio="none">
+                        <!-- Dual Twisted Wires -->
+                        <path d="M 0 6 Q 30 11 60 6 T 120 6 T 180 6 T 240 6 T 300 6 T 360 6 T 420 6 T 480 6 T 540 6 T 600 6 T 660 6 T 720 6 T 780 6 T 840 6 T 900 6 T 960 6 T 1020 6 T 1080 6 T 1140 6 T 1200 6" stroke="#9CA3AF" stroke-width="1.8" fill="none"/>
+                        <path d="M 0 12 Q 30 7 60 12 T 120 12 T 180 12 T 240 12 T 300 12 T 360 12 T 420 12 T 480 12 T 540 12 T 600 12 T 660 12 T 720 12 T 780 12 T 840 12 T 900 12 T 960 12 T 1020 12 T 1080 12 T 1140 12 T 1200 12" stroke="#6B7280" stroke-width="1.8" fill="none"/>
+                        
+                        <!-- Detailed Barbs -->
+                        <g class="barb-element" fill="none" stroke="#B87A3D" stroke-width="2.2" stroke-linecap="round">
+                            <path d="M 120 9 M 112 1 L 128 17 M 112 17 L 128 1 M 116 9 L 124 9"/>
+                            <path d="M 360 9 M 352 1 L 368 17 M 352 17 L 368 1 M 356 9 L 364 9"/>
+                            <path d="M 600 9 M 592 1 L 608 17 M 592 17 L 608 1 M 596 9 L 604 9"/>
+                            <path d="M 840 9 M 832 1 L 848 17 M 832 17 L 848 1 M 836 9 L 844 9"/>
+                            <path d="M 1080 9 M 1072 1 L 1088 17 M 1072 17 L 1088 1 M 1076 9 L 1084 9"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10 my-2">
+                    <div class="max-w-2xl">
+                        <span class="text-brand-terracotta text-xs font-bold uppercase tracking-widest block mb-2">Lubbock, Texas &bull; Flagship Headquarters</span>
+                        <h3 class="western-header text-3xl sm:text-4xl font-bold text-white mb-4">Forged In West Texas. Built To Last.</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed font-light">
+                            Lone Star Threads creates bold modern western wear built on high contrast monochrome aesthetics. From custom 3D embroidered caps to tailored button-up shirts, every piece is built for long-lasting wear and stark western style.
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="#catalog" class="px-8 py-4 bg-brand-terracotta text-black font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors block text-center shadow-xl">
+                            Explore Apparel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BOTTOM SVG DETAILED BARBED WIRE STRIP -->
+                <div class="absolute bottom-0 left-0 right-0 h-4 overflow-hidden pointer-events-none opacity-90">
+                    <svg class="w-full h-full text-brand-wireSteel" viewBox="0 0 1200 18" preserveAspectRatio="none">
+                        <path d="M 0 6 Q 30 11 60 6 T 120 6 T 180 6 T 240 6 T 300 6 T 360 6 T 420 6 T 480 6 T 540 6 T 600 6 T 660 6 T 720 6 T 780 6 T 840 6 T 900 6 T 960 6 T 1020 6 T 1080 6 T 1140 6 T 1200 6" stroke="#9CA3AF" stroke-width="1.8" fill="none"/>
+                        <path d="M 0 12 Q 30 7 60 12 T 120 12 T 180 12 T 240 12 T 300 12 T 360 12 T 420 12 T 480 12 T 540 12 T 600 12 T 660 12 T 720 12 T 780 12 T 840 12 T 900 12 T 960 12 T 1020 12 T 1080 12 T 1140 12 T 1200 12" stroke="#6B7280" stroke-width="1.8" fill="none"/>
+                        
+                        <g class="barb-element" fill="none" stroke="#B87A3D" stroke-width="2.2" stroke-linecap="round">
+                            <path d="M 120 9 M 112 1 L 128 17 M 112 17 L 128 1 M 116 9 L 124 9"/>
+                            <path d="M 360 9 M 352 1 L 368 17 M 352 17 L 368 1 M 356 9 L 364 9"/>
+                            <path d="M 600 9 M 592 1 L 608 17 M 592 17 L 608 1 M 596 9 L 604 9"/>
+                            <path d="M 840 9 M 832 1 L 848 17 M 832 17 L 848 1 M 836 9 L 844 9"/>
+                            <path d="M 1080 9 M 1072 1 L 1088 17 M 1072 17 L 1088 1 M 1076 9 L 1084 9"/>
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cartOverlay" onclick="toggleCart()" class="fixed inset-0 bg-black/80 z-50 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm"></div>
+
+    <!-- Slide-Out Shopping Cart Drawer -->
+    <aside id="cartDrawer" class="cart-drawer closed fixed top-0 right-0 h-full w-full max-w-md bg-brand-black z-50 shadow-2xl flex flex-col border-l border-brand-border">
+        
+        <!-- Cart Header -->
+        <div class="p-6 border-b border-brand-border flex items-center justify-between bg-brand-jet">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-bag-shopping text-brand-terracotta text-lg"></i>
+                <h3 class="western-header text-lg font-bold text-white">Shopping Bag</h3>
+                <span id="cartItemCountText" class="text-xs text-brand-terracotta font-bold bg-black px-2 py-0.5 border border-brand-border">(0)</span>
+            </div>
+            <button onclick="toggleCart()" class="text-gray-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Cart Free Shipping Progress Bar -->
+        <div class="px-6 py-3 bg-brand-jet/50 border-b border-brand-border text-xs">
+            <div class="flex justify-between text-gray-300 mb-1">
+                <span id="shippingProgressText">Add $120.00 for Free Shipping</span>
+                <span id="shippingPercentText" class="font-bold text-brand-terracotta">0%</span>
+            </div>
+            <div class="w-full bg-black h-1.5 border border-brand-border">
+                <div id="shippingProgressBar" class="bg-brand-terracotta h-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Cart Items Container -->
+        <div id="cartItemsContainer" class="flex-grow overflow-y-auto p-6 space-y-4">
+            <!-- Empty View -->
+            <div id="emptyCartView" class="text-center py-16 text-gray-500">
+                <i class="fa-solid fa-basket-shopping text-4xl mb-3 text-brand-border"></i>
+                <p class="text-sm font-medium text-gray-300">Your bag is currently empty.</p>
+                <p class="text-xs mt-1 text-gray-500">Explore our embroidered caps and button-up shirts.</p>
+                <button onclick="toggleCart()" class="mt-6 px-6 py-3 bg-brand-terracotta text-black font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors">
+                    Start Shopping
+                </button>
+            </div>
+            <div id="cartItemList" class="space-y-4"></div>
+        </div>
+
+        <!-- Cart Summary Footer -->
+        <div id="cartFooter" class="p-6 border-t border-brand-border bg-brand-jet space-y-4">
+            <div class="space-y-2 text-xs">
+                <div class="flex justify-between text-gray-400">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal" class="font-bold text-white">$0.00</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>Estimated Sales Tax (Lubbock 8.25%)</span>
+                    <span id="cartTax" class="font-bold text-white">$0.00</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>Shipping</span>
+                    <span id="cartShipping" class="font-bold text-brand-terracotta">Calculated</span>
+                </div>
+                <div class="border-t border-brand-border pt-3 flex justify-between text-sm font-bold text-white">
+                    <span>Total Amount</span>
+                    <span id="cartTotal" class="text-brand-terracotta text-base">$0.00</span>
+                </div>
+            </div>
+
+            <button onclick="openCheckoutModal()" class="w-full py-4 bg-white hover:bg-brand-terracotta text-black font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center space-x-2 shadow-lg">
+                <span>Proceed to Checkout</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+            <p class="text-[10px] text-center text-gray-500 uppercase tracking-widest">
+                <i class="fa-solid fa-lock text-[9px] mr-1 text-brand-terracotta"></i> Encrypted Secure Checkout
+            </p>
+        </div>
+    </aside>
+
+    <!-- Interactive Product Quick View Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black/85 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm">
+        <div class="bg-brand-black max-w-3xl w-full overflow-hidden shadow-2xl border-2 border-brand-border flex flex-col md:flex-row relative">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 z-10 bg-black border border-brand-border text-white hover:text-brand-terracotta w-9 h-9 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Image View -->
+            <div class="md:w-1/2 h-72 md:h-auto relative bg-black p-4 flex items-center justify-center border-b md:border-b-0 md:border-r border-brand-border">
+                <div class="w-full h-full overflow-hidden relative border border-brand-border">
+                    <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Details Section -->
+            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between bg-brand-jet">
+                <div>
+                    <span id="modalCategory" class="text-[10px] font-bold text-brand-terracotta uppercase tracking-widest"></span>
+                    <h3 id="modalTitle" class="western-header text-2xl font-bold text-white mt-1"></h3>
+                    
+                    <div class="flex items-center space-x-3 my-3">
+                        <div id="modalStars" class="text-brand-terracotta text-xs"></div>
+                        <span id="modalRatingText" class="text-xs text-gray-400 font-medium"></span>
+                    </div>
+
+                    <div id="modalPrice" class="text-2xl font-bold text-white mb-4"></div>
+                    <p id="modalDescription" class="text-xs text-gray-300 leading-relaxed mb-6"></p>
+
+                    <!-- Dynamic Size Selector -->
+                    <div class="mb-6">
+                        <label id="modalSizeLabel" class="block text-xs font-bold text-white uppercase tracking-widest mb-3">Select Size</label>
+                        <div class="flex flex-wrap gap-2" id="sizeSelector">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <button id="modalAddToCartBtn" onclick="" class="w-full py-4 bg-brand-terracotta hover:bg-white text-black font-bold text-xs uppercase tracking-widest shadow transition-colors flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Add To Bag</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Simulation Modal -->
+    <div id="checkoutModal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-md">
+        <div class="bg-brand-black max-w-lg w-full p-8 border-2 border-brand-terracotta text-center relative">
+            <div class="w-16 h-16 bg-brand-terracotta text-black flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="western-header text-2xl font-bold text-white mb-2">Order Confirmed!</h3>
+            <p class="text-xs text-gray-300 mb-6 leading-relaxed">
+                Thank you for choosing Lone Star Threads. Your order is being processed in our Lubbock, TX workshop.
+            </p>
+
+            <div class="bg-brand-jet p-4 border border-brand-border text-left text-xs space-y-2 mb-6">
+                <div class="flex justify-between text-gray-400">
+                    <span>Order Number:</span>
+                    <span class="text-white font-mono font-bold">LST-2026-8819</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>Fulfillment Hub:</span>
+                    <span class="text-brand-terracotta">Lubbock, TX</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>Estimated Dispatch:</span>
+                    <span class="text-white">24-48 Hours</span>
+                </div>
+            </div>
+
+            <button onclick="closeCheckoutModal()" class="w-full py-3.5 bg-white hover:bg-brand-terracotta text-black font-bold text-xs uppercase tracking-widest transition-colors">
+                Return To Shop
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification Toast Bar -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-brand-jet border-2 border-brand-terracotta text-white px-6 py-3.5 shadow-2xl z-50 flex items-center space-x-3 transform translate-y-24 opacity-0 transition-all duration-300">
+        <div class="w-6 h-6 bg-brand-terracotta text-black flex items-center justify-center text-xs font-bold">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <span id="toastMessage" class="text-xs font-bold uppercase tracking-wider">Item added to bag!</span>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="support" class="bg-brand-black border-t border-brand-border pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-14 border-b border-brand-border">
+                
+                <!-- Brand Summary -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 border border-brand-terracotta text-brand-terracotta flex items-center justify-center font-bold text-xs">
+                            LST
+                        </div>
+                        <span class="western-header text-xl font-bold tracking-tight text-white">LONE STAR</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">
+                        Modern high-contrast western apparel out of Lubbock, Texas. Custom 3D direct embroidered caps and tailored short & long sleeve button ups.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" class="w-8 h-8 bg-brand-jet border border-brand-border hover:border-brand-terracotta text-gray-400 hover:text-white flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 bg-brand-jet border border-brand-border hover:border-brand-terracotta text-gray-400 hover:text-white flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 bg-brand-jet border border-brand-border hover:border-brand-terracotta text-gray-400 hover:text-white flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Shop Navigation -->
+                <div>
+                    <h4 class="western-header text-xs font-bold text-white uppercase tracking-widest mb-4 border-b border-brand-border pb-2">Collections</h4>
+                    <ul class="space-y-2 text-xs text-gray-400 uppercase tracking-wider">
+                        <li><a href="#catalog" onclick="filterProducts('snapbacks')" class="hover:text-brand-terracotta transition-colors">Embroidered Caps</a></li>
+                        <li><a href="#catalog" onclick="filterProducts('short-sleeve')" class="hover:text-brand-terracotta transition-colors">Short Sleeve Button Ups</a></li>
+                        <li><a href="#catalog" onclick="filterProducts('long-sleeve')" class="hover:text-brand-terracotta transition-colors">Long Sleeve Button Ups</a></li>
+                        <li><a href="#catalog" onclick="filterProducts('all')" class="hover:text-brand-terracotta transition-colors">All Apparel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Support -->
+                <div>
+                    <h4 class="western-header text-xs font-bold text-white uppercase tracking-widest mb-4 border-b border-brand-border pb-2">Support & Info</h4>
+                    <ul class="space-y-2 text-xs text-gray-400 uppercase tracking-wider">
+                        <li><a href="#" class="hover:text-brand-terracotta transition-colors">Button Up Fit Guide</a></li>
+                        <li><a href="#" class="hover:text-brand-terracotta transition-colors">West Texas Shipping</a></li>
+                        <li><a href="#" class="hover:text-brand-terracotta transition-colors">Returns & Exchanges</a></li>
+                        <li><a href="#" class="hover:text-brand-terracotta transition-colors">Cap Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-brand-terracotta transition-colors">Contact Lubbock Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Form -->
+                <div class="space-y-3">
+                    <h4 class="western-header text-xs font-bold text-white uppercase tracking-widest mb-2 border-b border-brand-border pb-2">Join The Club</h4>
+                    <p class="text-xs text-gray-400">Subscribe for drop notifications, private sales, and 10% off your first order.</p>
+                    <form onsubmit="handleNewsletter(event)" class="space-y-2">
+                        <input type="email" required placeholder="Enter email address..." class="w-full px-3 py-2.5 bg-brand-jet border border-brand-border text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-terracotta">
+                        <button type="submit" class="w-full py-2.5 bg-brand-terracotta hover:bg-white text-black text-xs font-bold uppercase tracking-widest transition-colors">
+                            Claim 10% Off
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Bottom Legal Strip -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 uppercase tracking-widest gap-4">
+                <p>&copy; 2026 Lone Star Threads Co. Lubbock, TX. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Catalog Dataset: ONLY 3 Categories (Snapbacks, Short Sleeve Button Ups, Long Sleeve Button Ups)
+        // All Caps feature direct EMBROIDERY (NO patches or leather patches).
+        // All Shirts feature standard BUTTON UPS (NO pearl snaps or western snap buttons).
+        const products = [
+            // EMBROIDERED SNAPBACKS
+            {
+                id: 1,
+                name: "Lone Star Thread Embroidered Snapback",
+                category: "snapbacks",
+                categoryName: "Embroidered Snapback",
+                price: 36.00,
+                rating: 4.9,
+                reviews: 52,
+                sizes: ['Adjustable Snapback OSFM'],
+                image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+                description: "Structured high-profile black cotton canvas snapback with custom high-density 3D direct white star thread embroidery."
+            },
+            {
+                id: 2,
+                name: "Lubbock Brand Embroidered Snapback",
+                category: "snapbacks",
+                categoryName: "Embroidered Snapback",
+                price: 34.00,
+                rating: 4.8,
+                reviews: 39,
+                sizes: ['Adjustable Snapback OSFM'],
+                image: "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+                description: "Charcoal cap front with breathable mesh back featuring bold raised custom front logo embroidery."
+            },
+            {
+                id: 3,
+                name: "3D Raised Embroidery Cattleman Snapback",
+                category: "snapbacks",
+                categoryName: "Embroidered Snapback",
+                price: 38.00,
+                rating: 5.0,
+                reviews: 67,
+                sizes: ['Adjustable Snapback OSFM'],
+                image: "https://images.unsplash.com/photo-1534215754734-18e52d13e546?auto=format&fit=crop&w=800&q=80",
+                description: "Heavyweight dark canvas snapback featuring thick 3D raised western cattle brand embroidery across the front panels."
+            },
+            {
+                id: 4,
+                name: "West Texas Script Embroidered Snapback",
+                category: "snapbacks",
+                categoryName: "Embroidered Snapback",
+                price: 35.00,
+                rating: 4.7,
+                reviews: 31,
+                sizes: ['Adjustable Snapback OSFM'],
+                image: "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=800&q=80",
+                description: "All-black structured cap with precise script lettering embroidered on the front and tonal star embroidery on the side."
+            },
+
+            // SHORT SLEEVE BUTTON UPS
+            {
+                id: 5,
+                name: "Monochrome Oxford Short Sleeve Button Up",
+                category: "short-sleeve",
+                categoryName: "Short Sleeve Button Up",
+                price: 58.00,
+                rating: 4.9,
+                reviews: 58,
+                sizes: ['S', 'M', 'L', 'XL', '2XL'],
+                image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+                description: "Tailored jet-black cotton woven shirt with standard button front closure, reinforced collar, and clean chest pocket."
+            },
+            {
+                id: 6,
+                name: "Dusty Trail Short Sleeve Button Up",
+                category: "short-sleeve",
+                categoryName: "Short Sleeve Button Up",
+                price: 62.00,
+                rating: 4.8,
+                reviews: 44,
+                sizes: ['S', 'M', 'L', 'XL', '2XL'],
+                image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+                description: "Breathable dark heather cotton stretch button up with dual buttoned flap pockets and durable double-needle seams."
+            },
+            {
+                id: 7,
+                name: "Lone Star Print Short Sleeve Button Up",
+                category: "short-sleeve",
+                categoryName: "Short Sleeve Button Up",
+                price: 56.00,
+                rating: 4.7,
+                reviews: 35,
+                sizes: ['S', 'M', 'L', 'XL', '2XL'],
+                image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+                description: "Lightweight black short sleeve button up shirt with a geometric western star pattern and front button collar."
+            },
+
+            // LONG SLEEVE BUTTON UPS
+            {
+                id: 8,
+                name: "Blackout Heavyweight Button Up Long Sleeve",
+                category: "long-sleeve",
+                categoryName: "Long Sleeve Button Up",
+                price: 74.00,
+                rating: 5.0,
+                reviews: 104,
+                sizes: ['S', 'M', 'L', 'XL', '2XL'],
+                image: "https://images.unsplash.com/photo-1589310243389-96a5483213a8?auto=format&fit=crop&w=800&q=80",
+                description: "Heavyweight black twill long sleeve button up featuring sturdy horn-style button closures and dual chest flap pockets."
+            },
+            {
+                id: 9,
+                name: "Heritage Canvas Button Up Long Sleeve",
+                category: "long-sleeve",
+                categoryName: "Long Sleeve Button Up",
+                price: 72.00,
+                rating: 4.8,
+                reviews: 63,
+                sizes: ['S', 'M', 'L', 'XL', '2XL'],
+                image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80",
+                description: "Monochrome western grid shirt with full button placket, buttoned cuffs, and tailored chest utility pockets."
+            },
+            {
+                id: 10,
+                name: "Saddle Stitch Button Up Long Sleeve",
+                category: "long-sleeve",
+                categoryName: "Long Sleeve Button Up",
+                price: 78.00,
+                rating: 4.9,
+                reviews: 49,
+                sizes: ['S', 'M', 'L', 'XL', '2XL'],
+                image: "https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?auto=format&fit=crop&w=800&q=80",
+                description: "Structured black cotton long sleeve button up shirt detailed with contrast saddle topstitching and custom black buttons."
+            }
+        ];
+
+        let cart = [];
+        let activeCategory = 'all';
+        let selectedSize = 'S';
+        let currentModalProduct = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(products);
+            updateCartUI();
+        });
+
+        function filterProducts(category) {
+            activeCategory = category;
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.cat === category) {
+                    btn.className = "filter-btn active-filter px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all bg-white text-black border border-white";
+                } else {
+                    btn.className = "filter-btn px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all bg-brand-jet text-gray-300 border border-brand-border hover:border-brand-terracotta";
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.dataset.category === category) {
+                    link.className = "nav-link text-white hover:text-brand-terracotta transition-colors py-1 relative border-b-2 border-brand-terracotta";
+                } else {
+                    link.className = "nav-link text-gray-400 hover:text-white transition-colors py-1 relative border-b-2 border-transparent";
+                }
+            });
+
+            const filtered = category === 'all' 
+                ? products 
+                : products.filter(p => p.category === category);
+
+            renderProducts(filtered);
+        }
+
+        function handleSearch(type = 'desktop') {
+            const query = (type === 'mobile' 
+                ? document.getElementById('mobileSearchInput').value 
+                : document.getElementById('searchInput').value).toLowerCase().trim();
+
+            const matches = products.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.description.toLowerCase().includes(query) ||
+                p.categoryName.toLowerCase().includes(query)
+            );
+
+            renderProducts(matches);
+        }
+
+        function renderProducts(items) {
+            const grid = document.getElementById('productGrid');
+            const noResults = document.getElementById('noResults');
+
+            if (items.length === 0) {
+                grid.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            noResults.classList.add('hidden');
+            grid.innerHTML = items.map(product => {
+                const stars = '★'.repeat(Math.floor(product.rating));
+                return `
+                    <div class="rugged-wire-card flex flex-col group relative overflow-hidden bg-brand-cardBg">
+                        
+                        <!-- TOP RUGGED BARBED WIRE BORDER (SVG) -->
+                        <div class="absolute top-0 left-0 right-0 h-4 z-20 overflow-hidden pointer-events-none opacity-90">
+                            <svg class="w-full h-full text-brand-wireSteel" viewBox="0 0 400 16" preserveAspectRatio="none">
+                                <!-- Dual Twisted Wire Strands -->
+                                <path d="M 0 5 Q 10 9 20 5 T 40 5 T 60 5 T 80 5 T 100 5 T 120 5 T 140 5 T 160 5 T 180 5 T 200 5 T 220 5 T 240 5 T 260 5 T 280 5 T 300 5 T 320 5 T 340 5 T 360 5 T 380 5 T 400 5" stroke="#9CA3AF" stroke-width="1.6" fill="none"/>
+                                <path d="M 0 11 Q 10 7 20 11 T 40 11 T 60 11 T 80 11 T 100 11 T 120 11 T 140 11 T 160 11 T 180 11 T 200 11 T 220 11 T 240 11 T 260 11 T 280 11 T 300 11 T 320 11 T 340 11 T 360 11 T 380 11 T 400 11" stroke="#4B5563" stroke-width="1.6" fill="none"/>
+                                
+                                <!-- Sharp Barbs -->
+                                <g class="barb-element" fill="none" stroke="#B87A3D" stroke-width="2" stroke-linecap="round">
+                                    <!-- Barb 1 -->
+                                    <path d="M 70 8 M 63 1 L 77 15 M 63 15 L 77 1 M 66 8 L 74 8"/>
+                                    <!-- Barb 2 -->
+                                    <path d="M 200 8 M 193 1 L 207 15 M 193 15 L 207 1 M 196 8 L 204 8"/>
+                                    <!-- Barb 3 -->
+                                    <path d="M 330 8 M 323 1 L 337 15 M 323 15 L 337 1 M 326 8 L 334 8"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- Image Display Container -->
+                        <div class="relative h-64 overflow-hidden bg-black cursor-pointer border-b border-brand-border" onclick="openProductModal(${product.id})">
+                            <img src="${product.image}" alt="${product.name}" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                            
+                            <span class="absolute top-5 left-3 bg-black/90 border border-brand-terracotta text-brand-terracotta text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 z-10">
+                                ${product.categoryName}
+                            </span>
+
+                            <button onclick="event.stopPropagation(); openProductModal(${product.id})" class="absolute bottom-3 right-3 bg-black border border-brand-terracotta text-white hover:bg-brand-terracotta hover:text-black px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                                <i class="fa-regular fa-eye mr-1"></i> Quick View
+                            </button>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="p-5 flex flex-col flex-grow justify-between relative z-10">
+                            <div>
+                                <div class="flex items-center space-x-1 text-brand-terracotta text-xs mb-2">
+                                    <span>${stars}</span>
+                                    <span class="text-gray-400 text-[10px] font-bold ml-1">(${product.reviews})</span>
+                                </div>
+                                <h3 onclick="openProductModal(${product.id})" class="western-header font-bold text-white text-base group-hover:text-brand-terracotta transition-colors cursor-pointer leading-tight">
+                                    ${product.name}
+                                </h3>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                                <span class="text-lg font-bold text-white">$${product.price.toFixed(2)}</span>
+                                <button onclick="addToCart(${product.id})" class="px-3.5 py-2 bg-white hover:bg-brand-terracotta text-black text-[11px] font-bold uppercase tracking-widest transition-colors flex items-center space-x-1 shadow">
+                                    <i class="fa-solid fa-plus mr-1"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- BOTTOM RUGGED BARBED WIRE BORDER (SVG) -->
+                        <div class="absolute bottom-0 left-0 right-0 h-4 z-20 overflow-hidden pointer-events-none opacity-90">
+                            <svg class="w-full h-full text-brand-wireSteel" viewBox="0 0 400 16" preserveAspectRatio="none">
+                                <path d="M 0 5 Q 10 9 20 5 T 40 5 T 60 5 T 80 5 T 100 5 T 120 5 T 140 5 T 160 5 T 180 5 T 200 5 T 220 5 T 240 5 T 260 5 T 280 5 T 300 5 T 320 5 T 340 5 T 360 5 T 380 5 T 400 5" stroke="#9CA3AF" stroke-width="1.6" fill="none"/>
+                                <path d="M 0 11 Q 10 7 20 11 T 40 11 T 60 11 T 80 11 T 100 11 T 120 11 T 140 11 T 160 11 T 180 11 T 200 11 T 220 11 T 240 11 T 260 11 T 280 11 T 300 11 T 320 11 T 340 11 T 360 11 T 380 11 T 400 11" stroke="#4B5563" stroke-width="1.6" fill="none"/>
+                                
+                                <g class="barb-element" fill="none" stroke="#B87A3D" stroke-width="2" stroke-linecap="round">
+                                    <path d="M 70 8 M 63 1 L 77 15 M 63 15 L 77 1 M 66 8 L 74 8"/>
+                                    <path d="M 200 8 M 193 1 L 207 15 M 193 15 L 207 1 M 196 8 L 204 8"/>
+                                    <path d="M 330 8 M 323 1 L 337 15 M 323 15 L 337 1 M 326 8 L 334 8"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function addToCart(productId, size = null) {
+            const product = products.find(p => p.id === productId);
+            const itemSize = size || (product.sizes ? product.sizes[0] : 'Standard');
+            const existingItem = cart.find(item => item.id === productId && item.size === itemSize);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    ...product,
+                    size: itemSize,
+                    quantity: 1
+                });
+            }
+
+            updateCartUI();
+            showToast(`Added ${product.name} (${itemSize})`);
+        }
+
+        function updateQuantity(productId, size, change) {
+            const itemIndex = cart.findIndex(item => item.id === productId && item.size === size);
+            if (itemIndex > -1) {
+                cart[itemIndex].quantity += change;
+                if (cart[itemIndex].quantity <= 0) {
+                    cart.splice(itemIndex, 1);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartBadge');
+            const cartItemList = document.getElementById('cartItemList');
+            const emptyCartView = document.getElementById('emptyCartView');
+            const cartFooter = document.getElementById('cartFooter');
+            const cartItemCountText = document.getElementById('cartItemCountText');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.0825; // Texas 8.25% Sales Tax
+            const grandTotal = subtotal + tax;
+
+            // Free Shipping threshold ($120)
+            const shippingThreshold = 120.00;
+            const progressPercent = Math.min(100, (subtotal / shippingThreshold) * 100);
+            
+            document.getElementById('shippingProgressBar').style.width = `${progressPercent}%`;
+            document.getElementById('shippingPercentText').textContent = `${Math.round(progressPercent)}%`;
+
+            if (subtotal >= shippingThreshold) {
+                document.getElementById('shippingProgressText').textContent = "FREE EXPRESS SHIPPING UNLOCKED!";
+            } else {
+                const remaining = shippingThreshold - subtotal;
+                document.getElementById('shippingProgressText').textContent = `Add $${remaining.toFixed(2)} for Free Shipping`;
+            }
+
+            if (totalItems > 0) {
+                badge.textContent = totalItems;
+                badge.classList.remove('hidden');
+                emptyCartView.classList.add('hidden');
+                cartFooter.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+                emptyCartView.classList.remove('hidden');
+                cartFooter.classList.add('hidden');
+            }
+
+            cartItemCountText.textContent = `(${totalItems})`;
+
+            cartItemList.innerHTML = cart.map(item => `
+                <div class="flex items-center space-x-3 p-3 bg-brand-jet border border-brand-border">
+                    <img src="${item.image}" alt="${item.name}" class="w-14 h-14 object-cover border border-brand-border shrink-0">
+                    <div class="flex-grow min-w-0">
+                        <h4 class="text-xs font-bold text-white truncate">${item.name}</h4>
+                        <p class="text-[10px] text-gray-400">Size: <span class="font-bold text-brand-terracotta">${item.size}</span></p>
+                        <p class="text-xs font-bold text-white mt-1">$${item.price.toFixed(2)}</p>
+                    </div>
+                    <div class="flex flex-col items-end space-y-2">
+                        <button onclick="updateQuantity(${item.id}, '${item.size}', -${item.quantity})" class="text-gray-500 hover:text-red-500 text-xs">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class="flex items-center border border-brand-border bg-black text-xs font-bold">
+                            <button onclick="updateQuantity(${item.id}, '${item.size}', -1)" class="px-2 py-0.5 text-gray-400 hover:text-white">-</button>
+                            <span class="px-2 text-white">${item.quantity}</span>
+                            <button onclick="updateQuantity(${item.id}, '${item.size}', 1)" class="px-2 py-0.5 text-gray-400 hover:text-white">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('cartSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('cartTax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('cartTotal').textContent = `$${grandTotal.toFixed(2)}`;
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cartDrawer');
+            const overlay = document.getElementById('cartOverlay');
+
+            if (drawer.classList.contains('closed')) {
+                drawer.classList.remove('closed');
+                drawer.classList.add('open');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                drawer.classList.add('closed');
+                drawer.classList.remove('open');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        function openProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            currentModalProduct = product;
+            selectedSize = product.sizes ? product.sizes[0] : 'S';
+
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalCategory').textContent = product.categoryName;
+            document.getElementById('modalTitle').textContent = product.name;
+            document.getElementById('modalStars').textContent = '★'.repeat(Math.floor(product.rating));
+            document.getElementById('modalRatingText').textContent = `${product.rating} (${product.reviews} reviews)`;
+            document.getElementById('modalPrice').textContent = `$${product.price.toFixed(2)}`;
+            document.getElementById('modalDescription').textContent = product.description;
+
+            const sizeContainer = document.getElementById('sizeSelector');
+            document.getElementById('modalSizeLabel').textContent = product.category === 'snapbacks' ? 'Select Cap Fit' : 'Select Shirt Size';
+
+            sizeContainer.innerHTML = product.sizes.map((sz, index) => `
+                <button onclick="selectModalSize('${sz}')" class="size-btn px-3 py-1.5 border text-xs font-bold uppercase transition-colors ${index === 0 ? 'border-brand-terracotta bg-brand-terracotta text-black' : 'border-brand-border text-gray-300 hover:border-white'}">
+                    ${sz}
+                </button>
+            `).join('');
+
+            document.getElementById('modalAddToCartBtn').onclick = () => {
+                addToCart(product.id, selectedSize);
+                closeProductModal();
+            };
+
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('productModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function selectModalSize(size) {
+            selectedSize = size;
+            document.querySelectorAll('#sizeSelector .size-btn').forEach(btn => {
+                if (btn.textContent.trim() === size) {
+                    btn.className = "size-btn px-3 py-1.5 border text-xs font-bold uppercase border-brand-terracotta bg-brand-terracotta text-black";
+                } else {
+                    btn.className = "size-btn px-3 py-1.5 border text-xs font-bold uppercase border-brand-border text-gray-300 hover:border-white";
+                }
+            });
+        }
+
+        function openCheckoutModal() {
+            toggleCart();
+            const modal = document.getElementById('checkoutModal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            cart = [];
+            updateCartUI();
+        }
+
+        function closeCheckoutModal() {
+            const modal = document.getElementById('checkoutModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        function handleNewsletter(event) {
+            event.preventDefault();
+            showToast("Welcome partner! Your discount code is: LST10");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
